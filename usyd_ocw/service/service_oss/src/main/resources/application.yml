@@ -15,8 +15,8 @@ spring:
 
 aliyun:
   oss:
-    endpoint: oss-ap-southeast-2.aliyuncs.com
-    keyid: LTAI5tMrpqjZsqD88KkTaxSw
-    keysecret: Db4u5JQynjnAQHBfCnETnGGcCSisml
+    endpoint: XXXXXXXXXXXXX
+    keyid: XXXXXXXXXXXXX
+    keysecret: XXXXXXXXXXXXX
     # bucket可以在控制台创建，也可以使用java代码创建，注意先测试bucket是否已被占用
-    bucketname: guli-file-joe-1
+    bucketname: XXXXXXXXXXXXX

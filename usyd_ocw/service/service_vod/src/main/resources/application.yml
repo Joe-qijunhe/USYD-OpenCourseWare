@@ -17,7 +17,7 @@ spring:
 
 aliyun:
   vod:
-    keyid: LTAI5tMrpqjZsqD88KkTaxSw
-    keysecret: Db4u5JQynjnAQHBfCnETnGGcCSisml
+    keyid: XXXXXXXXXXXX
+    keysecret: XXXXXXXXXXXX
     templateGroupId: 你配置的转码模板组id # 转码模板组id
     workflowId: 你配置的工作流id # 工作流id
