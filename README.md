@@ -84,17 +84,17 @@
 
 ```java
 usyd_ocw                 // 后端项目
-├── common                      // 通用代码层
-│    └── common_util             // 工具类
-│   └── service_base            // 业务通用代码
-├── api_gateway               // gateway网关
+├── common                 // 通用代码层
+│  └── common_util            // 工具类
+│  └── service_base           // 业务通用代码
+├── api_gateway            // gateway网关
 ├── feign-api              // 远程调用接口     
-├── service                     // 业务代码层
-│  └── service_cms             // 前台内容api
-│  └── service_edu             // 后台内容api
-│  └── service_oss             // 阿里云oss文件存储
-│  └── service_sms             // 阿里云短信分发
-│  └── service_ucenter         // 用户模块
-│  └── service_vod             // 腾讯云vod视频存储
+├── service                // 业务代码层
+│  └── service_cms            // 前台内容api
+│  └── service_edu            // 后台内容api
+│  └── service_oss            // 阿里云oss文件存储
+│  └── service_sms            // 阿里云短信分发
+│  └── service_ucenter        // 用户模块
+│  └── service_vod           // 腾讯云vod视频存储
 ```
 
