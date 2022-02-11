@@ -1,0 +1,60 @@
+server:
+  port: 8110 # 服务端口
+
+spring:
+  profiles:
+    active: dev # 环境设置
+
+  application:
+    name: service-edu # 服务名
+
+  datasource: # mysql数据库连接
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli_edu?serverTimezone=GMT%2B8
+    username: root
+    password: 123qwe
+
+  jackson: # 返回json的全局时间格式
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  cloud:
+    nacos: # 注册中心
+      discovery:
+        server-addr: localhost:8848 # nacos服务地址
+    sentinel: # 服务容错
+      transport:
+        port: 8081 # 跟控制台交流的端口，随意指定一个未使用的端口即可
+        dashboard: localhost:8080 # 指定控制台服务的地址
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    password:  #默认为空
+    lettuce:
+      pool:
+        max-active: 20  #最大连接数，负值表示没有限制，默认8
+        max-wait: -1    #最大阻塞等待时间，负值表示没限制，默认-1
+        max-idle: 8     #最大空闲连接，默认8
+        min-idle: 0     #最小空闲连接，默认0
+
+mybatis-plus:
+  # mybatis日志，配置控制台打印完整带参数SQL语句
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 指定mapper位置
+  mapper-locations: classpath:org/joe/ocw/service/edu/mapper/xml/*.xml
+
+# OpenFeing的底层即是对ribbon的封装
+# OpenFeign默认等待1秒钟，否则超时报错。这里配置ribbon的超时时间
+ribbon:
+  MaxAutoRetries: 0 # 同一实例最大重试次数，不包括首次调用，默认0
+  MaxAutoRetriesNextServer: 1 # 重试其他实例的最大重试次数，不包括首次所选的server，默认1
+  ConnectTimeout: 10000 # 10s，连接建立的超时时长，默认1秒
+  ReadTimeout: 10000 # 处理请求的超时时间，默认为1秒
+
+# 开启Sentinel支持
+feign:
+  sentinel:
+    enabled: true

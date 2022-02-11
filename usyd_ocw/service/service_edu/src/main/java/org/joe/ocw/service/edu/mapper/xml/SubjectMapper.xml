@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.joe.ocw.service.edu.mapper.SubjectMapper">
+
+    <resultMap id="nestedSubject" type="org.joe.ocw.service.edu.entity.vo.SubjectVo">
+        <!--column对应的是数据库的列名或别名；property对应的是结果集的字段或属性 -->
+        <!--column="{id}"也行-->
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="sort" column="sort" />
+        <collection property="children"
+                    ofType="org.joe.ocw.service.edu.entity.vo.SubjectVo"
+                    select="selectNestedListByParentId"
+                    column="{parentId=id}"/>
+    </resultMap>
+
+    <select id="selectNestedListByParentId" resultMap="nestedSubject">
+        select id, sort, title
+        from edu_subject
+        where parent_id = #{parentId}
+    </select>
+
+</mapper>
