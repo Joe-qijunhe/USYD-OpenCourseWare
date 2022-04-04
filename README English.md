@@ -4,11 +4,11 @@ As a USYD student, I found it is difficult to make informed choice about electiv
 
 # Technology Stack
 
--   Front End: **Vue**, ElementUI, Nuxt.js
+-   Front End: Vue, ElementUI, Nuxt.js
 
--   Back End: Restful style interfaces, **SpringBoot** and **SpringCloud** for microservice architecture
+-   Back End: Restful style interfaces, SpringBoot and SpringCloud for microservice architecture
 
--   Database: **MySQL,** Redis**,** Alibaba cloud services
+-   Database: MySQL, Redis, Alibaba cloud services
 
 # How to start
 

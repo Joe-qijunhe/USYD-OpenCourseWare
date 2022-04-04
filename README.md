@@ -1,4 +1,4 @@
-[README in English click here]()
+[README in English click here](https://github.com/Joe-qijunhe/USYD-OpenCourseWare/blob/main/README%20English.md)
 
 # 项目背景
 
