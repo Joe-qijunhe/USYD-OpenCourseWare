@@ -1,3 +1,5 @@
+[README in English click here]()
+
 # 项目背景
 
 本人发现作为一名悉尼大学学生，居然无法使用学校非本专业的课程资源。这导致了我们学生在选择选修课程时一头雾水:confused: ，复习与预习课程也十分困难:cry: ，给了一些黑心补课机构可乘之机。本人受到MIT OpenCourseWare启发，觉得作为“One of the top universities in Australia”的悉尼大学也应该拥有一个开放课程平台，所以对开源的在线教育平台项目进行二次开发，搭建了这个悉尼大学免费课程资源分享平台。
